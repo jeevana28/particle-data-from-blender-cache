@@ -51,7 +51,7 @@ def dump_one_file(fname):
             vel.append(math.sqrt(vel_x*vel_x+vel_y*vel_y+vel_z*vel_z))
         
 
-dump_one_file("C:/Users/lenovo/Desktop/blenderfolder/bpy/43756265_000101_00.bphys")
+dump_one_file("C:/Users/lenovo/Desktop/blenderfolder/bpy/43756265_000105_00.bphys")
 #print(*vel,  sep=",")
 #print("\n")
 M_vel=max(vel)
