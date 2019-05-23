@@ -1,10 +1,9 @@
-
 import csv 
-import time
+import math
 import matplotlib.pyplot as plt
+import numpy as np
+import time
 from drawnow import *
-
-plt.ion()
 filename = "C:/Users/lenovo/Desktop/blenderdata.csv"
 fields = [] 
 rows = [] 
@@ -14,13 +13,27 @@ with open(filename, 'r') as csvfile:
     for row in csvreader: 
         rows.append(row) 
 #print(*rows[1], sep = ",")
-
-
-def makegraph():
-    i=0
-    while i<48:
-        plt.plot(rows[i], rows[i+1])
-        time.sleep(200)
-        i=i+2
+#print(*rows[8], sep=',')
+l=len(rows[8])
+#print(l)
+i=0
+while i<48:
+        rows[i]=list(filter(None, rows[i]))
+        i=i+1
+'''k=0
+while k<48:
+        rows[k]=rows[k][slice(0,21,1)]
+        k=k+1'''
+def plotg():
+        plt.plot(x,y)
         plt.show()
-drawnow(makegraph)
+j=0
+plt.ion()
+while j<47:
+        xraw=np.array(rows[j])
+        x=xraw.astype(np.float)
+        yraw=np.array(rows[j+1])
+        y=yraw.astype(np.float)
+        time.sleep(0.5)
+        j=j+2
+        drawnow(plotg)

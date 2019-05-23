@@ -51,7 +51,7 @@ def dump_one_file(fname):
             vel.append(math.sqrt(vel_x*vel_x+vel_y*vel_y+vel_z*vel_z))
         
 
-dump_one_file("C:/Users/lenovo/Desktop/blenderfolder/bpy/43756265_000105_00.bphys")
+dump_one_file("C:/Users/lenovo/Desktop/blenderfolder/bpy/43756265_000081_00.bphys")
 #print(*vel,  sep=",")
 #print("\n")
 M_vel=max(vel)
@@ -59,7 +59,7 @@ m_vel=min(vel)
 print(max(vel))
 print(min(vel))
 l=len(vel)
-#print(l)
+print(l)
 num=[]
 velocity=[]
 v=0.5
@@ -100,7 +100,7 @@ plt.title("histogram")
 plt.show()'''
 
 
-i=2
+'''i=2
 import csv
 
 myData = [velocity,num]  
@@ -108,4 +108,4 @@ myFile = open("C:/Users/lenovo/Desktop/blenderdata.csv", "a")
 with myFile:  
    writer = csv.writer(myFile)
    writer.writerows(myData)
-   myFile.close()
+   myFile.close()'''
